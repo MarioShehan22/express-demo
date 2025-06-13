@@ -23,8 +23,8 @@ jobs:
       - name: Deploy to EC2
         run: |
           ssh ${{ secrets.USER }}@${{ secrets.HOST }} << 'EOF'
-            cd /home/ubuntu/devops-api
-            git pull origin main
+            cd /home/ubuntu/express-demo
+            git pull origin master
             npm install
             pm2 restart index || pm2 start index.js --name devops-api
           EOF
