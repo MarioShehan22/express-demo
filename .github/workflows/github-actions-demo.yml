@@ -26,5 +26,5 @@ jobs:
             cd /home/ubuntu/express-demo
             git pull origin master
             npm install
-            pm2 restart index || pm2 start index.js --name devops-api
+            pm2 restart index || pm2 start index.js --name express-demo
           EOF
