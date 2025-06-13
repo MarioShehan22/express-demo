@@ -22,7 +22,7 @@ jobs:
 
       - name: Deploy to EC2
         run: |
-          ssh ${{ secrets.USER }}@${{ secrets.HOST }} << 'EOF'
+          ssh -tt ${{ secrets.USER }}@${{ secrets.HOST }} << 'EOF'
             cd /home/ubuntu/express-demo
             git pull origin master
             npm install
